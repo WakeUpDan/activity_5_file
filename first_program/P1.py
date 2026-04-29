@@ -20,3 +20,9 @@ class FileProcessor:
         except ValueError as e:
             print(f"Error: Found non-numeric data. {e}")
             return False
+    
+class NumberSorter:
+    def __init__(self, data):
+        self.data = data
+        self.evens = []
+        self.odds = []
