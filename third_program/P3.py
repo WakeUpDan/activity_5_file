@@ -24,3 +24,10 @@ class LifeRecorder:
                         break
                     elif choice != 'y':
                         print("Unknown command. Continuing by default...")
+
+        except IOError as e:
+            print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    recorder = LifeRecorder()
+    recorder.write_to_file()
