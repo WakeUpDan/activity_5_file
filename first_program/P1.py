@@ -47,7 +47,6 @@ class NumberSorter:
             return False
 
 if __name__ == "__main__":
-    # Ensure 'numbers.txt' exists with your data before running
     processor = FileProcessor("numbers.txt")
     
     if processor.load_numbers():
