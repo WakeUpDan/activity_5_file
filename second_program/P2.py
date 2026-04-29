@@ -5,3 +5,8 @@ class Student:
         self.gwa = float(gwa)
     def __repr__(self):
         return f"{self.name} | GWA: {self.gwa:.2f}"
+
+class FileProcessor:
+    """Handles all file-related operations."""
+    def __init__(self, filename):
+        self.filename = filename
