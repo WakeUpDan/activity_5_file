@@ -45,3 +45,16 @@ class NumberSorter:
         except IOError as e:
             print(f"File writing error: {e}")
             return False
+
+if __name__ == "__main__":
+    # Ensure 'numbers.txt' exists with your data before running
+    processor = FileProcessor("numbers.txt")
+    
+    if processor.load_numbers():
+        sorter = NumberSorter(processor.numbers)
+        sorter.sort()
+        sorter.save("even.txt", "odd.txt")
+        
+        print(f"Processing Complete!")
+        print(f"Total numbers processed: {len(processor.numbers)}")
+        print(f"Evens found: {len(sorter.evens)} | Odds found: {len(sorter.odds)}")
